@@ -40,9 +40,8 @@ public class BigDecimals {
             decimales_num = decimales_num - decimales_a_quitar;
             if (decimales_num >= 0) {
                 BigDecimal nuevo_divisor = BigDecimal.valueOf(1, decimales_num);
-                MathContext mathContext = new MathContext(decimales_num, RoundingMode.DOWN);
                 bigDecimal_array = bigDecimal.divideAndRemainder(nuevo_divisor);
-                retorno = bigDecimal.subtract(bigDecimal_array[1], mathContext);
+                retorno = bigDecimal.subtract(bigDecimal_array[1]);
                 retorno =  retorno.stripTrailingZeros();
             } else {
                 retorno = bigDecimal;
@@ -68,7 +67,7 @@ public class BigDecimals {
             ResourceBundle in;
             in = ResourceBundles.getBundle(k_in_ruta);
             BigDecimal retorno = null;
-            if (divisor.toBigInteger().compareTo(BigInteger.ZERO) == 0) {
+            if (divisor.compareTo(BigDecimal.ZERO) == 0) {
                 ok.setTxt(tr.in(in, "División entre 0. "));
                 if (dividendo.compareTo(BigDecimal.ZERO) >= 0) {
                     if (divisor.compareTo(BigDecimal.ZERO) >= 0) {
