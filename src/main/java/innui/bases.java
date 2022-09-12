@@ -234,7 +234,7 @@ public class bases implements i_formatos, i_escrituras {
         if (this.escritura != null) {
             return this.escritura.escribir_linea(texto, ok, extras_array);
         }
-        System.out.print(texto);
+        System.out.println(texto);
         return true;
     }
     /**
@@ -264,7 +264,7 @@ public class bases implements i_formatos, i_escrituras {
         if (this.escritura != null) {
             return this.escritura.escribir_linea_error(texto, ok, extras_array);
         }
-        System.err.print(texto);
+        System.err.println(texto);
         return true;
     }
 }
