@@ -232,10 +232,32 @@ public class oks extends bases {
             throw ex;
         }
     }
-    
+    /**
+     * Evalua si el parámetro no es nulo
+     * @param o objeto que evaluar
+     * @return true si o no es nulo, false si o es nulo
+     * @throws Exception Opción de notificar errores de excepción
+     */
     public boolean no_nul(Object o) throws Exception {
         try {
             es = (o != null);
+            return es;
+        } catch (Exception e) {
+            throw e; // Ayuda para la depuración
+        }
+    }
+    /**
+     * Evalua si el parámetro no es nulo
+     * @param o objeto que evaluar
+     * @param txt Mensaje de error
+     * @return true si o no es nulo, false si o es nulo
+     * @throws Exception Opción de notificar errores de excepción
+     */
+    public boolean no_nul(Object o, String txt) throws Exception {
+        try {
+            if (no_nul(o) == false) {
+                this.txt = txt;
+            }
             return es;
         } catch (Exception e) {
             throw e; // Ayuda para la depuración
