@@ -49,9 +49,10 @@ public class oks extends bases {
     /**
      * Indicar si ok va bien
      * @param es Valor que poner
+     * @param extra_array Opción de añadir parámetros en el futuro.
      * @throws Exception Opción de notificar errores de excepción
      */
-    public void setEs(boolean es) throws Exception {
+    public void setEs(boolean es, Object ... extra_array) throws Exception {
         try {
             if (o_es()) {
                 ((oks)o()).setEs(es);
@@ -81,9 +82,10 @@ public class oks extends bases {
     /**
      * Establecer el identificador del error.
      * @param id Identificador
+     * @param extra_array Opción de añadir parámetros en el futuro.
      * @throws Exception Opción de notificar errores de excepción
      */
-    public void setId(String id) throws Exception {
+    public void setId(String id, Object ... extra_array) throws Exception {
         try {
             if (o_es()) {
                 ((oks)o()).setId(id);
@@ -113,9 +115,10 @@ public class oks extends bases {
     /**
      * Establecer la gravedad del error.
      * @param gravedad Gravedad qeu poner
+     * @param extra_array Opción de añadir parámetros en el futuro.
      * @throws Exception Opción de notificar errores de excepción
      */
-    public void setGravedad(int gravedad) throws Exception {
+    public void setGravedad(int gravedad, Object ... extra_array) throws Exception {
         try {
             if (o_es()) {
                 ((oks)o()).setGravedad(gravedad);
@@ -145,12 +148,13 @@ public class oks extends bases {
     /**
      * Establecer el texto del error.
      * @param txt Texto que poner
+     * @param extra_array Opción de añadir parámetros en el futuro.
      * @throws Exception Opción de notificar errores de excepción
      */
-    public void setTxt(String txt) throws Exception {
+    public void setTxt(String txt, Object ... extra_array) throws Exception {
         try {
             if (o_es()) {
-                ((oks)o()).setTxt(txt);
+                ((oks)o()).setTxt(txt, extra_array);
             } else {
                 this.txt = txt;
             }
@@ -165,9 +169,10 @@ public class oks extends bases {
      * Establecer el texto del error.
      * @param txt Texto que poner
      * @param txt_siguiente Texto adicional qeu situar detrás del txt
+     * @param extra_array Opción de añadir parámetros en el futuro.
      * @throws Exception Opción de notificar errores de excepción
      */
-    public void setTxt(String txt, String txt_siguiente) throws Exception {
+    public void setTxt(String txt, String txt_siguiente, Object ... extra_array) throws Exception {
         try {
             if (o_es()) {
                 ((oks)o()).setTxt(txt);
@@ -189,6 +194,7 @@ public class oks extends bases {
      * Establecer el texto del error.
      * @param txt Texto que poner
      * @param e Exceptión de la que obtener parte del texto del error.
+     * @param extra_array Opción de añadir parámetros en el futuro.
      * @throws Exception Opción de notificar errores de excepción
      */
     public void setTxt(String txt, Exception e, Object ... extra_array) throws Exception {
@@ -207,6 +213,7 @@ public class oks extends bases {
     /**
      * Establecer el texto del error.
      * @param e Exceptión de la que obtener parte del texto del error.
+     * @param extra_array Opción de añadir parámetros en el futuro.
      * @throws Exception Opción de notificar errores de excepción
      */
     public void setTxt(Exception e, Object ... extra_array) throws Exception {
@@ -236,9 +243,10 @@ public class oks extends bases {
      * Evalua si el parámetro no es nulo
      * @param o objeto que evaluar
      * @return true si o no es nulo, false si o es nulo
+     * @param extra_array Opción de añadir parámetros en el futuro.
      * @throws Exception Opción de notificar errores de excepción
      */
-    public boolean no_nul(Object o) throws Exception {
+    public boolean no_nul(Object o, Object ... extra_array) throws Exception {
         try {
             es = (o != null);
             return es;
@@ -250,10 +258,11 @@ public class oks extends bases {
      * Evalua si el parámetro no es nulo
      * @param o objeto que evaluar
      * @param txt Mensaje de error
+     * @param extra_array Opción de añadir parámetros en el futuro.
      * @return true si o no es nulo, false si o es nulo
      * @throws Exception Opción de notificar errores de excepción
      */
-    public boolean no_nul(Object o, String txt) throws Exception {
+    public boolean no_nul(Object o, String txt, Object ... extra_array) throws Exception {
         try {
             if (no_nul(o) == false) {
                 this.txt = txt;

@@ -4,6 +4,7 @@
  */
 package innui.utiles.bigdecimals;
 
+import innui.bases;
 import innui.modelos.configuraciones.ResourceBundles;
 import innui.modelos.errores.oks;
 import innui.modelos.internacionalizacion.tr;
@@ -17,7 +18,7 @@ import java.util.ResourceBundle;
  *
  * @author emilio
  */
-public class BigDecimals {
+public class BigDecimals extends bases {
     public static String k_in_ruta = "in/innui/utiles/bigdecimals/in";
     /**
      * Quita decimales a un número
