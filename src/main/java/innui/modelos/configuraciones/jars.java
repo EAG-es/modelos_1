@@ -30,7 +30,7 @@ import java.util.zip.ZipInputStream;
  */
 public class jars extends bases {
 
-    public static String k_in_ruta = "in/innui/modelos/configuracion/in";
+    public static String k_in_ruta = "in/innui/modelos/configuraciones/in";
     /**
      * Copia un recurso localizado relativo a una clase, a una ruta de destino.
      * @param clase Clase de referencia relativa
@@ -186,6 +186,9 @@ public class jars extends bases {
             List<String> contenido_lista = new ArrayList<>();
             ok.es = listar_contenido_de_jar(clase, contenido_lista, ok);
             if (ok.es) {
+                if (ruta_origen_recurso.endsWith(File.separator) == false) {
+                    ruta_origen_recurso=ruta_origen_recurso + File.separator;
+                }
                 for (String ruta: contenido_lista) {
                     if (ruta.startsWith(ruta_origen_recurso)) {
                         ok.es = instalar_fuera(clase, ruta, ok);

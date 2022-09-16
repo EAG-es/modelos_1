@@ -12,7 +12,6 @@ import innui.modelos.internacionalizacion.tr;
 import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 
 /**
@@ -20,7 +19,7 @@ import java.util.ResourceBundle;
  * @author emilio
  */
 public class Resources extends bases {
-    public static String k_in_ruta = "in/innui/modelos/configuracion/in";
+    public static String k_in_ruta = "in/innui/modelos/configuraciones/in";
     /**
      * Obtiene un recurso
      * @param ruta_relativa ruta del recurso

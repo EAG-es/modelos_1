@@ -12,7 +12,6 @@ import java.io.File;
 import java.net.URL;
 import java.security.CodeSource;
 import java.security.ProtectionDomain;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 
 /**
@@ -20,7 +19,7 @@ import java.util.ResourceBundle;
  * @author emilio
  */
 public class rutas extends bases {
-    public static String k_in_ruta = "in/innui/modelos/configuracion/in";
+    public static String k_in_ruta = "in/innui/modelos/configuraciones/in";
     public static String k_no_jar = ResourceBundles.getBundle_ne(k_in_ruta).getString("LA CLASE NO ESTÁ EN UN ARCHIVO JAR. ");
     
     /**

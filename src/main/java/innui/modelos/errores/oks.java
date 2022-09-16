@@ -31,6 +31,26 @@ public class oks extends bases {
     public String txt = "";
     public int gravedad = k_gravedad_minima;
     /**
+     * Pone a valor por defecto los atributos no estáticos
+     * @return true si tiene éxito;
+     * @throws Exception 
+     */
+    public boolean iniciar() throws Exception {
+        try {
+            if (o_es()) {
+                return ((oks)o()).iniciar();
+            } else {
+                es = true;
+                id = "";
+                txt = "";
+                gravedad = k_gravedad_minima;
+                return true;
+            }
+        } catch (Exception e) {
+            throw e; // Ayuda para la depuración
+        }
+    }
+    /**
      * Consultar si ok va bien
      * @return true si todo va bien
      * @throws Exception Opción de notificar errores de excepción
@@ -195,9 +215,8 @@ public class oks extends bases {
      * @param txt Texto que poner
      * @param e Exceptión de la que obtener parte del texto del error.
      * @param extra_array Opción de añadir parámetros en el futuro.
-     * @throws Exception Opción de notificar errores de excepción
      */
-    public void setTxt(String txt, Exception e, Object ... extra_array) throws Exception {
+    public void setTxt(String txt, Exception e, Object ... extra_array) {
         try {
             if (o_es()) {
                 ((oks)o()).setTxt(txt, e);
@@ -206,7 +225,7 @@ public class oks extends bases {
                 setTxt(txt, this.txt);
             }
         } catch (Exception ex) {
-            throw ex;
+            setTxt(e);
         }
     }
     
@@ -214,9 +233,8 @@ public class oks extends bases {
      * Establecer el texto del error.
      * @param e Exceptión de la que obtener parte del texto del error.
      * @param extra_array Opción de añadir parámetros en el futuro.
-     * @throws Exception Opción de notificar errores de excepción
      */
-    public void setTxt(Exception e, Object ... extra_array) throws Exception {
+    public void setTxt(Exception e, Object ... extra_array) {
         try {
             if (o_es()) {
                 ((oks)o()).setTxt(e);
@@ -236,7 +254,7 @@ public class oks extends bases {
                 }
             }
         } catch (Exception ex) {
-            throw ex;
+            setTxt(e);
         }
     }
     /**
