@@ -249,8 +249,8 @@ public class oks extends bases {
                     if (texto == null) {
                         texto = "";
                     }
-                    this.txt = k_separador_inicio + texto + k_separador_fin
-                            + k_separador_inicio + byteArrayOutputStream.toString() + k_separador_fin;
+                    setTxt(k_separador_inicio + texto + k_separador_fin
+                            + k_separador_inicio + byteArrayOutputStream.toString() + k_separador_fin);
                 }
             }
         } catch (Exception ex) {
