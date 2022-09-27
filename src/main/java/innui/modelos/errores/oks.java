@@ -35,7 +35,7 @@ public class oks extends bases {
      * @return true si tiene éxito;
      * @throws Exception 
      */
-    public boolean iniciar() throws Exception {
+    public oks iniciar() throws Exception {
         try {
             if (o_es()) {
                 return ((oks)o()).iniciar();
@@ -44,7 +44,7 @@ public class oks extends bases {
                 id = "";
                 txt = "";
                 gravedad = k_gravedad_minima;
-                return true;
+                return this;
             }
         } catch (Exception e) {
             throw e; // Ayuda para la depuración
